@@ -9,7 +9,7 @@
       // Step 1 - Add getter/setters for "greeting" property that updates/returns this.message
       // Step 2 - Define ExtendedGreeter class that is derived from Greeter
       // Step 3 - Override the "greeting" property in ExtendedGreeter to modify the greeting
-      
+
       class Greeter {
         constructor(message) {
           this.message = message;
@@ -25,11 +25,15 @@
       class ExtendedGreeter extends Greeter {
         constructor(message) {
           super(message);
-          this.message += " Again!";
+        }
+
+        greet() {
+          var element = document.querySelector("#message");
+          element.innerHTML = this.message + " Again!";
         }
       };
 
-      var greeter = new ExtendedGreeter("Hello, world!");
+      var greeter = new ExtendedGreeter("Hello, everybody!");
       greeter.greet();
     </script>
   </body>
