@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+      // Step 1 - Add getter/setters for "greeting" property that updates/returns this.message
+      // Step 2 - Define ExtendedGreeter class that is derived from Greeter
+      // Step 3 - Override the "greeting" property in ExtendedGreeter to modify the greeting
+      
+      class Greeter {
+        constructor(message) {
+          this.message = message;
+        }
+
+        greet() {
+          var element = document.querySelector("#message");
+          element.innerHTML = this.message;
+        }
+      };
+
+      
+      class ExtendedGreeter extends Greeter {
+        constructor(message) {
+          super(message);
+          this.message += " Again!";
+        }
+      };
+
+      var greeter = new ExtendedGreeter("Hello, world!");
+      greeter.greet();
+    </script>
+  </body>
+</html>
