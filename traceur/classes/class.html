@@ -6,20 +6,35 @@
     <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
     <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
     <script type="module">
-      //Add getter/setters for 'greeting' property that updates/returns this.message
-      class Greeter {
-        constructor(message) {
-          this.message = message;
+
+      //
+      //Add a property as to whether the imperial instance wears a helmet
+      //
+      
+      class Imperial {
+        constructor(name, forceIsWithThem) {
+          this._name = name;
+          this._forceIsWithThem = (forceIsWithThem === true);
+          this._says = "Look sir, Droids!";
         }
 
-        greet() {
-          var element = document.querySelector("#message");
-          element.innerHTML = this.message ;
+        get forceIsWithThem() {
+          return this._forceIsWithThem;
         }
+
+        get says() {
+          return (this.forceIsWithThem) ? this._says.toUpperCase() : this._says;
+        }
+
+        set says(value) {
+          this._says = value || "";
+        }
+
       };
 
-      var greeter = new Greeter("Hello, Everybody!");
-      greeter.greet();
+      var trooper = new Imperial("Impertial Trooper", false);
+      var element = document.querySelector("#message");
+      element.innerHTML = trooper.says;
     </script>
   </body>
 </html>

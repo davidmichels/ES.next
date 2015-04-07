@@ -8,7 +8,11 @@
     <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
     <script type="module">
       
-      class Empirial {
+      //
+      // Example of Imperial inheritance
+      // 
+
+      class Imperial {
         constructor(name, forceIsWithThem, wearsHelmet) {
           this._name = name;
           this._forceIsWithThem = (forceIsWithThem === true);
@@ -34,7 +38,7 @@
 
       };
 
-      class StormTrooper extends Empirial {
+      class StormTrooper extends Imperial {
         constructor() {
           super("Storm Trooper", false, true);
           super.says = "These are the droids we're looking for";
@@ -47,7 +51,7 @@
 
       };
 
-      class DarthVader extends Empirial {
+      class DarthVader extends Imperial {
         constructor() {
           super("Darth Vader", true, true);
           super.says = "I find your lack of faith distrubing";
