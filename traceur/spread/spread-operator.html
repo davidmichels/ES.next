@@ -6,12 +6,11 @@
     <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
     <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
     <script type="module">
-
-      //Modify to take variable arguments
-      var sum = (num1, num2) => num1 + num2;
+      
+      let values = [55, 61, 34, 777, 42, 46, 885, 12];
 
       var element = document.querySelector('#message');
-      element.innerHTML = "Sum: " + sum(3,4); //change to supply variable # of arguments
+      element.innerHTML = "Min value: " + Math.min(...values);
     </script>
   </body>
 </html>

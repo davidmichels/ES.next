@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+
+		var employee = {
+			//encapsulation - not so much
+	        _firstName: "",
+	        _lastName: "",
+	        set firstName(value) {
+	            this._firstName = value || "";
+	        },
+	        set lastName(value) {
+	            this._lastName = value || "";
+	        },
+	        get fullName() {
+	            return this.firstName + " " + this.lastName;
+	        },
+	        get firstName() {
+	            return this._firstName;
+	        },
+	        get lastName() {
+	            return this._lastName;
+	        }
+	    };
+
+	    employee.firstName = "Dave";
+	    employee.lastName = "Michels";
+		var element = document.querySelector('#message');
+        element.innerHTML = employee.fullName;
+    </script>
+  </body>
+</html>
+
+
+
+
+
