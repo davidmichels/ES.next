@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+  <body>
+    <h1 id="message"></h1>
+
+    <script >
+      var obj = {
+        doSomething: true,
+        doNothing: false
+      };
+
+      var {
+        doSomething: myDoSomething,
+        doNothing: myDoNothing
+      } = obj;
+
+      var element = document.querySelector("#message");
+      element.innerHTML = "Destructured 'doSomething': " + myDoSomething;
+    </script>
+  </body>
+
+</html>

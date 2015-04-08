@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+
+    <script >
+
+      //
+      //Add a property as to whether the imperial instance wears a helmet
+      //
+      
+      class Imperial {
+        constructor(name, forceIsWithThem) {
+          this._name = name;
+          this._forceIsWithThem = (forceIsWithThem === true);
+          this._says = "Look sir, Droids!";
+        }
+
+        get forceIsWithThem() {
+          return this._forceIsWithThem;
+        }
+
+        get says() {
+          return (this.forceIsWithThem) ? this._says.toUpperCase() : this._says;
+        }
+
+        set says(value) {
+          this._says = value || "";
+        }
+
+      };
+
+      var trooper = new Imperial("Impertial Trooper", false);
+      var element = document.querySelector("#message");
+      element.innerHTML = trooper.says;
+    </script>
+  </body>
+</html>

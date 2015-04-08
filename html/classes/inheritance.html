@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+
+    <script >
+      
+      // 1 - Add new Vader class inherits from Imperial
+      // 2 - Add another HTML header to write out what he announces
+
+      class Imperial {
+        constructor(name, forceIsWithThem, wearsHelmet) {
+          this._name = name;
+          this._forceIsWithThem = (forceIsWithThem === true);
+          this._wearsHelmet = (wearsHelmet === true);
+          this._says = "";
+        }
+
+        get wearsHelmet() {
+          return this._wearsHelmet; 
+        }
+
+        get forceIsWithThem() {
+          return this._forceIsWithThem;
+        }
+
+        get says() {
+          return (this.forceIsWithThem) ? this._says.toUpperCase() : this._says;
+        }
+
+        set says(value) {
+          this._says = value || "";
+        }
+
+      };
+
+      class StormTrooper extends Imperial {
+        constructor() {
+          super("Storm Trooper", false, true);
+          super.says = "These are the droids we're looking for";
+        }
+
+        announce() {
+          var element = document.querySelector("#message");
+          element.innerHTML = this.says;
+        }
+
+      };
+
+      var trooper = new StormTrooper();
+      trooper.announce();
+    </script>
+  </body>
+</html>

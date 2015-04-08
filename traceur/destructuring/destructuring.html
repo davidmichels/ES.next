@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+  <body>
+    <h1 id="message"></h1>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+      var obj = {
+        doSomething: true,
+        doNothing: false
+      };
+
+      var {
+        doSomething: myDoSomething,
+        doNothing: myDoNothing
+      } = obj;
+
+      var element = document.querySelector("#message");
+      element.innerHTML = "Destructured 'doSomething': " + myDoSomething;
+    </script>
+  </body>
+
+</html>

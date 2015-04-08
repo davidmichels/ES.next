@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="clickMe">Click Me!</h1>
+    <h1 id="numClicks">Clicks: 0</h1>
+
+    <script >
+
+      var clickCounter = {
+        count: 0,
+        init: function () {
+          var element = document.querySelector('#clickMe');
+          element.addEventListener("click", (event) => {
+            this.count++;
+            var element = document.querySelector('#numClicks');
+            element.innerHTML = "Clicks: " + this.count;
+          }, false);
+        }
+      };
+
+      clickCounter.init();
+      element.innerHTML = "Sum: " + sum; //replace with function call
+    </script>
+  </body>
+</html>

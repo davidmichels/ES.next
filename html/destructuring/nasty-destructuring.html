@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+
+    <script >
+
+      var [a, [b], [c, d], e] = ["Hello", [", ", "junk"],
+          ["world", "!"]
+      ];
+
+      var element = document.querySelector("#message");
+      element.innerHTML = "Nasty: " + a + b + c + d;
+
+    </script>
+  </body>
+</html>
