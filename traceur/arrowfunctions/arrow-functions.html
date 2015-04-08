@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="message"></h1>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+
+      //change sum to be arrow function that sums 2 parameters
+      var sum = 3 + 4; // (num1, num2) => num1 + num2;
+
+      var element = document.querySelector('#message');
+      element.innerHTML = "Sum: " + sum; //replace with function call
+    </script>
+  </body>
+</html>
