@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1 id="multiLine"></h1>
+    <h1 id="substitution"></h1>
+    <h1 id="expression"></h1>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+
+      let multiLine = `This is a 
+      multi-line string`;
+      
+      let element = document.querySelector("#multiLine");
+      element.innerHTML = multiLine;
+      
+      let substitution = `Substitution using multi-line value of: 
+        '${multiLine}'`;
+      
+      element = document.querySelector("#substitution");
+      element.innerHTML = substitution;
+
+      let unitPrice = 5.55,
+          quantity = 13,
+          total = `The total cost is $${(unitPrice * quantity).toFixed(2)}`;
+      
+      element = document.querySelector("#expression");
+      element.innerHTML = total;
+
+    </script>
+  </body>
+</html>

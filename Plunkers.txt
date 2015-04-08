@@ -2,6 +2,8 @@ Plunker links to each example:
 
 Variables: http://plnkr.co/edit/twWp4SwbYqbbccOBJxCL
 
+Template Strings: http://plnkr.co/edit/urxFH7HzewSjK5ZO4GBW
+
 Destructuring: http://plnkr.co/edit/EmJARaq54De5PTHJ4DMu
 
 Array Destructuring: http://plnkr.co/edit/1iaeUrlqELzwK8IhH2mr
